@@ -25,7 +25,14 @@
 
    需要注意，pycrypto库对于高版本的python支持有些许问题，编程过程中遇到异常`AttributeError module 'time' has no attribute 'clock'`，查阅资料发现，Python3.8不再支持`time.clock`，但在调用时依然包含该方法。解决方法是使用`time.perf_counter()`替换报错的`time.clock()`
 
-4. 例程中消息的识别使用了正则表达式匹配，再书写正则表达式的过程中，发现了两个有趣的网站https://regex101.com/r/1Z02qx/1/，https://jex.im/regulex/#!flags=&re=%5BA-Z%5D%7C%5Cd%2B%5C.%5Cd%2B，有助于理解正则表达式
+4. 例程中消息的识别使用了正则表达式匹配，再书写正则表达式的过程中，发现了两个有趣的网站
+
+   https://regex101.com/r/1Z02qx/1/
+
+   https://jex.im/regulex/#!flags=&re=%5BA-Z%5D%7C%5Cd%2B%5C.%5Cd%2B 
+
+   有助于理解正则表达式
+
 5. 由于pycrypto加密长度限制，原理介绍中的(4)和(5)无法正常运行，已被注释，但是身份认证功能已经实现。
 
 ### 三、例程运行
